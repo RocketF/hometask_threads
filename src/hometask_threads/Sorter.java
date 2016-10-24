@@ -3,13 +3,27 @@ package hometask_threads;
 /**
  * Created by rocketf on 23.10.16.
  */
-public class Sorter {
-    private static Sorter ourInstance = new Sorter();
-
-    public static Sorter getInstance() {
-        return ourInstance;
+public class Sorter {                      //синглтон запуск сортировщика
+private Sorter(){
+    new ThreadSort().run();
+}
+    private static class SorterHolder{
+        private static final Sorter INSTANCE = new Sorter();
     }
-
-    private Sorter() {
+    public static Sorter getInstance(){
+        return SorterHolder.INSTANCE;
     }
 }
+
+
+
+   /* private static Sorter instance;
+    static Sorter getInstance(){
+        if(instance ==null){
+            instance = new Sorter();
+        }return instance;
+    }
+    public void Sorter(){
+      new ThreadSort().run();
+    }*/
+

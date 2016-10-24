@@ -10,7 +10,7 @@ import java.util.UUID;
 /**
  * Created by rocketf on 23.10.16.
  */
-public class Writer {
+public class Writer {                        //создание текстового файла для абоненотов
 
     static StringBuilder Writer () {
         StringBuilder mail = new StringBuilder();
@@ -25,7 +25,7 @@ public class Writer {
        String wTitle = title[ran.nextInt(2)];
     return wTitle;
     }
-    static Long randomTime(){            //TODO переписать метод new SimpleDateFormat ...formatDate.c.getTime()
+    static Long randomTime(){            //TODO: переписать метод new SimpleDateFormat ...formatDate.c.getTime()
         Random ran = new Random();
         Date date = new Date();
         Long time = date.getTime();

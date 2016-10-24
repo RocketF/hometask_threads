@@ -7,8 +7,6 @@ import java.util.Random;
  */
 public class App {
     public static void main (String[] args){
-
-
         Writer w1 = new Writer();
         Writer w2 = new Writer();
         Writer w3 = new Writer();
@@ -21,7 +19,6 @@ public class App {
         new Abonents(w4).start();
         new Abonents(w5).start();
         new Abonents(w6).start();
-
-
+        Sorter.getInstance();
     }
 }

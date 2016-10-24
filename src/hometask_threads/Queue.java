@@ -3,7 +3,7 @@ package hometask_threads;
 /**
  * Created by rocketf on 24.10.16.
  */
-public class Queue {
+public class Queue {                        //очередь
     private String[] queue;
     private int maxSize;
     private int totalElemens;
