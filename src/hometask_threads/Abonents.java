@@ -10,21 +10,25 @@ package hometask_threads;
     Abonents(Writer writer) {
         this.writer = writer;
     }
+    public void run(){
+        writer.q.insert(writer.toString());
+        System.out.println(Thread.currentThread().getName());
+    }
 
-    public void run() {
+   /* public void run() {
 
         if (writer.randomTitle().equals("info")) {
             System.out.println("1");
-        b1
         } else if (writer.randomTitle().equals("error")) {
             System.out.println("2");
-            return 2;
+
         } else if (writer.randomTitle().equals("question")) {
             System.out.println("3");
-            return 3;
+
         } else {
             System.out.println("4");
-            return 4;
+
         }
-    }
+    } */
+
 }

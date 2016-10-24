@@ -12,12 +12,11 @@ import java.util.UUID;
  */
 public class Writer {
 
-    static String[] Writer () {
-        String[] mail = new String[3];
-
-        mail[0] = randomTitle();
-        mail[1] = randomTime().toString();
-        mail[2] = randomText();
+    static StringBuilder Writer () {
+        StringBuilder mail = new StringBuilder();
+        mail.append(randomTitle());
+        mail.append(randomTime().toString());
+        mail.append(randomText());
         return mail;
     }
      static String randomTitle(){
@@ -26,7 +25,7 @@ public class Writer {
        String wTitle = title[ran.nextInt(2)];
     return wTitle;
     }
-    static Long randomTime(){
+    static Long randomTime(){            //TODO переписать метод new SimpleDateFormat ...formatDate.c.getTime()
         Random ran = new Random();
         Date date = new Date();
         Long time = date.getTime();
@@ -37,4 +36,8 @@ public class Writer {
         String s = UUID.randomUUID().toString();
         return s;
     }
+    Queue q = new Queue(10);
+
+
+
 }
