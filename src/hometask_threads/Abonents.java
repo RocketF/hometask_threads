@@ -5,13 +5,8 @@ package hometask_threads;
  */
 
     public class Abonents extends Thread {                 //абоненты
-    Writer writer;
 
-    Abonents(Writer writer) {
-        this.writer = writer;
-    }
-    public void run(){
-        writer.q.insert(writer.toString());
-        System.out.println(Thread.currentThread().getName());
+    public void run(String w){
+        Object data =  Factory.getMessage(w);
     }
 }
