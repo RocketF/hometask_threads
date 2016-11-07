@@ -12,12 +12,15 @@ public class Queue {                        //очередь
     public void insert (TreeMap element){
         queue.add(element);
     }
-
     public TreeMap take(){
         Integer n = queue.size();
         TreeMap tmp = new TreeMap();
         tmp = queue.get(n);
         queue.remove(n);
         return tmp;
+    }
+    public Integer size(){
+        Integer i = queue.size();
+        return i;
     }
 }

@@ -7,6 +7,7 @@ package hometask_threads;
     public class Abonents extends Thread {                 //абоненты
 
     public void run(String w){
-        Object data =  Factory.getMessage(w);
+      Object data =  Factory.getMessage(w).getText();
+
     }
 }

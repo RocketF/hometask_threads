@@ -3,7 +3,7 @@ package hometask_threads;
 /**
  * Created by rocketf on 23.10.16.
  */
-public class Sorter {                      //синглтон запуск сортировщика
+public class Sorter {
 private Sorter(){
     new ThreadSort().run();
 }

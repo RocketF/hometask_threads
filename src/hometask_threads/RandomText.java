@@ -14,6 +14,7 @@ TreeMap<Integer, String> treeMap = new TreeMap<>();
             treeMap.put(1,randomTitle());
             treeMap.put(2,randomTime());
             treeMap.put(3,randomText());
+          System.out.println("text created");
             return treeMap;
 
 }

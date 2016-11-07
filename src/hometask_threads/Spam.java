@@ -6,6 +6,7 @@ package hometask_threads;
 public class Spam implements Write{
     @Override
     public Object getText() {
-        return "SPAM!!!";
+        System.out.println("SPAM!!!");
+        return 12;
     }
 }

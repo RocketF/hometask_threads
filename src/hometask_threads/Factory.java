@@ -6,7 +6,7 @@ package hometask_threads;
 public class Factory {
     public static Write getMessage(String mode){
         if(mode.equals("start")){
-            return new Mail();
+            return  new Mail();
         }else {return new Spam();}
     }
 }

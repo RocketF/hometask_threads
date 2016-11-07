@@ -7,6 +7,8 @@ import java.util.Random;
  */
 public class App {
     public static void main (String[] args){
-        new Abonents().run("start");
+        Queue queue = new Queue();
+        queue.insert(new Abonents().run("start"));
+        Sorter.getInstance();
     }
 }
