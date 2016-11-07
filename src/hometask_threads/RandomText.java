@@ -9,7 +9,7 @@ import java.util.UUID;
  * Created by rocketf on 27.10.16.
  */
 public class RandomText {
-        TreeMap<Integer, String> RandomText() {
+      public TreeMap<Integer, String> RandomText() {
 TreeMap<Integer, String> treeMap = new TreeMap<>();
             treeMap.put(1,randomTitle());
             treeMap.put(2,randomTime());

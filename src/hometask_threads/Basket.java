@@ -8,10 +8,12 @@ import java.util.TreeSet;
  * Created by rocketf on 23.10.16.
  */
 public class Basket {                        //сорировочные корзины
-
-     Basket(String s){
-         Map basket = new TreeMap<>();
+    TreeMap basket;
+    public TreeMap Basket(){
+         this.basket = new TreeMap();
+        return basket;
     }
+
     public interface myComparator extends Comparable {   //TODO:сортировать по дате,которую извлекать matcher'ом
 
     }
