@@ -7,9 +7,9 @@ import java.util.TreeMap;
  * Created by rocketf on 24.10.16.
  */
 public class Queue {                        //очередь
-    private ArrayList<TreeMap> queue =new ArrayList<TreeMap>();
+    private ArrayList<String> queue =new ArrayList<String>();
 
-    public void insert (TreeMap element){
+    public void insert (String element){
         queue.add(element);
     }
     public TreeMap take(){

@@ -9,13 +9,13 @@ import java.util.UUID;
  * Created by rocketf on 27.10.16.
  */
 public class RandomText {
-      public TreeMap<Integer, String> RandomText() {
-TreeMap<Integer, String> treeMap = new TreeMap<>();
-            treeMap.put(1,randomTitle());
-            treeMap.put(2,randomTime());
-            treeMap.put(3,randomText());
+      public StringBuilder RandomText() {
+StringBuilder string  = new StringBuilder();
+            string.append(randomTitle());
+            string.append(randomTime());
+            string.append(randomText());
           System.out.println("text created");
-            return treeMap;
+            return string;
 
 }
     static String randomTitle() {
