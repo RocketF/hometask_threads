@@ -5,7 +5,7 @@ package hometask_threads;
  */
 public class Sorter {
 private Sorter(){
-    new ThreadSort().run();
+    new ThreadSort().start();
 }
     private static class SorterHolder{
         private static final Sorter INSTANCE = new Sorter();
@@ -17,13 +17,4 @@ private Sorter(){
 
 
 
-   /* private static Sorter instance;
-    static Sorter getInstance(){
-        if(instance ==null){
-            instance = new Sorter();
-        }return instance;
-    }
-    public void Sorter(){
-      new ThreadSort().run();
-    }*/
 

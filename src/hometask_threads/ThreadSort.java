@@ -1,5 +1,7 @@
 package hometask_threads;
 
+import com.sun.xml.internal.bind.v2.runtime.output.SAXOutput;
+
 import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -11,24 +13,22 @@ public class ThreadSort extends Thread{                           //сортир
     String p1 = "^info$";
     String p2 = "^error$";
     String p3 = "^question$";
-    //String p4 = "^todo$";
     public void run(Queue q ) {
         Basket b1 = new Basket();
         Basket b2 = new Basket();
         Basket b3 = new Basket();
         Basket b4 = new Basket();
-        TreeMap s = new TreeMap();
+        String s = new String();
         while (q.size() > 0) {
             s = q.take();
-            if (check(p1, s.get(1).toString())) {
-                b1.basket.add(s);        //// TODO:
-            } else if (check(p2, s.get(1).toString())) {
+            if (check(p1, s)){
+                b1.basket.add(s);
+            } else if (check(p2, s)) {
                 b2.basket.add(s);
-            } else if (check(p3, s.get(1).toString())) {
+            } else if (check(p3, s)) {
                 b3.basket.add(s);
             }
             b4.basket.add(s);
-
         }
     }
     public static boolean check(String p,String s ){

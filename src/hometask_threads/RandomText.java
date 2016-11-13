@@ -2,21 +2,20 @@ package hometask_threads;
 
 import java.util.Date;
 import java.util.Random;
-import java.util.TreeMap;
 import java.util.UUID;
 
 /**
  * Created by rocketf on 27.10.16.
  */
 public class RandomText {
-      public StringBuilder RandomText() {
-StringBuilder string  = new StringBuilder();
-            string.append(randomTitle());
-            string.append(randomTime());
-            string.append(randomText());
+      public  RandomText() {
+      StringBuilder string = new StringBuilder();
+          string.append(randomTitle());
+          string.append("time");
+          string.append(randomTime());
+          string.append("timeEnd");
+          string.append(randomText());
           System.out.println("text created");
-            return string;
-
 }
     static String randomTitle() {
         String[] title = {"info", "error", "question", "todo"};

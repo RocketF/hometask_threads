@@ -10,9 +10,8 @@ import java.util.TreeSet;
  */
 public class Basket {                        //сорировочные корзины
     ArrayList basket;
-    public ArrayList<String> Basket(){
+    public  Basket(){
          this.basket = new ArrayList();
-        return basket;
     }
 
 
