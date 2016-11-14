@@ -6,12 +6,13 @@ package hometask_threads;
 
     public class Abonents extends Thread {
     String s;
-    Abonents(String s){
+    Queue q ;
+    Abonents(String s, Queue q){
         this.s = s;
+        this.q = q;
     }
     public void run(){
       Object data =  Factory.getMessage(s).getText();
-        Queue q = new Queue();
         q.insert(data.toString());
     }
 }

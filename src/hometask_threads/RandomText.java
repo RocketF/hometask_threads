@@ -8,7 +8,7 @@ import java.util.UUID;
  * Created by rocketf on 27.10.16.
  */
 public class RandomText {
-      public  RandomText() {
+      public StringBuilder getText() {
       StringBuilder string = new StringBuilder();
           string.append(randomTitle());
           string.append("time");
@@ -16,7 +16,7 @@ public class RandomText {
           string.append("timeEnd");
           string.append(randomText());
           System.out.println("text created");
-}
+return  string;}
     static String randomTitle() {
         String[] title = {"info", "error", "question", "todo"};
         Random ran = new Random();
