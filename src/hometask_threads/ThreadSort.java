@@ -1,8 +1,6 @@
 package hometask_threads;
 
 import com.sun.xml.internal.bind.v2.runtime.output.SAXOutput;
-
-import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -13,12 +11,17 @@ public class ThreadSort extends Thread{                           //сортир
     String p1 = "^info$";
     String p2 = "^error$";
     String p3 = "^question$";
-    public void run(Queue q ) {
+    Queue q;
+    ThreadSort(Queue q){
+        this.q = q;
+    }
+    public void run() {
         Basket b1 = new Basket();
         Basket b2 = new Basket();
         Basket b3 = new Basket();
         Basket b4 = new Basket();
         String s = new String();
+        System.out.println("here i'm");
         while (q.size() > 0) {
             s = q.take();
             if (check(p1, s)){
