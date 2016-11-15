@@ -5,14 +5,15 @@ package hometask_threads;
  */
 
 public class Sorter {
-    Queue q;
+
 private Sorter(){
-    new ThreadSort(q).start();
+    new ThreadSort().start();
 }
     private static class SorterHolder{
         private static final Sorter INSTANCE = new Sorter();
     }
     public static Sorter getInstance(){
+
         return SorterHolder.INSTANCE;
     }
 }
