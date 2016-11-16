@@ -17,7 +17,8 @@ public class App {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        Sorter.getInstance();
+        //Sorter.getInstance();
+        new ThreadSort(q).start();
     }
 
 }

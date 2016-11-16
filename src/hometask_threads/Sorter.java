@@ -2,7 +2,7 @@ package hometask_threads;
 
 /**
  * Created by rocketf on 23.10.16.
- */
+
 
 public class Sorter {
 
@@ -13,10 +13,10 @@ private Sorter(){
         private static final Sorter INSTANCE = new Sorter();
     }
     public static Sorter getInstance(){
-
+    this.
         return SorterHolder.INSTANCE;
     }
 }
 
 
-
+ */

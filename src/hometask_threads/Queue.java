@@ -15,8 +15,8 @@ public class Queue {                        //очередь
     }
     public String take(){
         Integer n = queue.size();
-        String s = queue.get(n);
-        queue.remove(n);
+        String s = queue.get(n-1);
+        queue.remove(n-1);
         return s;
     }
     public Integer size(){
