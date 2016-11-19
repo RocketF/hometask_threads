@@ -8,9 +8,9 @@ import java.util.regex.Pattern;
  * Created by rocketf on 24.10.16.
  */
 public class ThreadSort extends Thread{                           //сортировщик
-    String p1 = "^info";
-    String p2 = "^error";
-    String p3 = "^question";
+    String p1 = "i.+";
+    String p2 = "e.+";
+    String p3 = "q.+";
     Queue q;
     ThreadSort(Queue q){
         this.q = q;
@@ -23,24 +23,25 @@ public class ThreadSort extends Thread{                           //сортир
         String s = new String();
         while (q.size() > 0) {
             s = q.take();
+            System.out.println(s);
             if (check(p1, s)){
                 System.out.println("true1");
                 b1.basket.add(s);
-                break;
+                continue;
             } else if (check(p2, s)) {
                 System.out.println("true2");
                 b2.basket.add(s);
-                break;
+                continue;
             } else if (check(p3, s)) {
                 System.out.println("true3");
                 b3.basket.add(s);
-                break;
+                continue;
             }
             System.out.println("true4");
             b4.basket.add(s);
         }
     }
-    public static boolean check(String p,String s ){
+    private boolean check(String p,String s ){
         Pattern p1 = Pattern.compile(p);
         Matcher m = p1.matcher(s);
         return m.matches();
