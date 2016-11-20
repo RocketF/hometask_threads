@@ -40,6 +40,7 @@ public class ThreadSort extends Thread{                           //сортир
             System.out.println("true4");
             b4.basket.add(s);
         }
+        b1.sortBasket(b1);
     }
     private boolean check(String p,String s ){
         Pattern p1 = Pattern.compile(p);
