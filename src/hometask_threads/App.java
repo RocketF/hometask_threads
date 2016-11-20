@@ -10,8 +10,11 @@ import static java.lang.Thread.sleep;
 public class App {
     public static void main (String[] args){
         Queue q = new Queue();
+        int i =0;
+        while (i<2){
         new Abonents("start",q).start();
-        new Abonents("start",q).start();
+        i++;
+        }
         try {
             sleep(1000);
         } catch (InterruptedException e) {

@@ -1,8 +1,6 @@
 package hometask_threads;
 
-import java.util.Date;
-import java.util.Random;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * Created by rocketf on 27.10.16.
@@ -24,13 +22,13 @@ public class RandomText {
         String wTitle = title[ran.nextInt(2)];
         return wTitle;
     }
-    static String randomTime() {            //TODO: переписать метод new SimpleDateFormat ...formatDate.c.getTime()
-        Random ran = new Random();
-        Date date = new Date();
-        Long time = date.getTime();
-        Long t = time - ran.nextInt(100);
-        String s = t.toString();
-        return s;
+    static String randomTime() {     //milliseconds
+        Random random = new Random();
+        GregorianCalendar cal = new GregorianCalendar(2016, Calendar.SEPTEMBER, 20);
+        cal.add(Calendar.MONTH, random.nextInt(4));
+        Long i = cal.getTimeInMillis();
+        System.out.println(i);
+        return i+" ";
     }
     static String randomText(){
         String s = UUID.randomUUID().toString();

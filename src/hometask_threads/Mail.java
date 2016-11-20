@@ -6,7 +6,6 @@ package hometask_threads;
 public class Mail implements Write {
     @Override
     public Object getText() {
-        System.out.println("запускаю рандомТекст");
         return  new RandomText().getText();
     }
 }
