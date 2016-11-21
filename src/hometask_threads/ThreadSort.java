@@ -1,13 +1,16 @@
 package hometask_threads;
 
+import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 import com.sun.xml.internal.bind.v2.runtime.output.SAXOutput;
+import com.sun.xml.internal.fastinfoset.util.CharArray;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
  * Created by rocketf on 24.10.16.
  */
-public class ThreadSort extends Thread{                           //сортировщик
+public class ThreadSort extends Thread{
     String p1 = "i.+";
     String p2 = "e.+";
     String p3 = "q.+";
@@ -23,28 +26,33 @@ public class ThreadSort extends Thread{                           //сортир
         String s = new String();
         while (q.size() > 0) {
             s = q.take();
-            System.out.println(s);
             if (check(p1, s)){
-                System.out.println("true1");
-                b1.basket.add(s);
+                insertInBasket(b1,s);
                 continue;
             } else if (check(p2, s)) {
-                System.out.println("true2");
-                b2.basket.add(s);
+                insertInBasket(b2,s);
                 continue;
             } else if (check(p3, s)) {
-                System.out.println("true3");
-                b3.basket.add(s);
+                insertInBasket(b3,s);
                 continue;
             }
-            System.out.println("true4");
-            b4.basket.add(s);
-        }
-        b1.sortBasket(b1);
+            insertInBasket(b4,s);
+        }System.out.println(b1.basket.values());
+        System.out.println(b2.basket.values());
+        System.out.println(b3.basket.values());
+        System.out.println(b4.basket.values());
+
     }
     private boolean check(String p,String s ){
         Pattern p1 = Pattern.compile(p);
         Matcher m = p1.matcher(s);
         return m.matches();
+    }
+    private void insertInBasket(Basket b, String s){
+        try {
+       b.basket.put(Double.parseDouble(s.substring(5,18)),s);
+        }catch (ClassCastException e) {
+        System.err.println("NumberFormatException");
+    }
     }
 }

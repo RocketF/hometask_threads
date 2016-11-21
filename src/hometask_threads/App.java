@@ -11,7 +11,7 @@ public class App {
     public static void main (String[] args){
         Queue q = new Queue();
         int i =0;
-        while (i<2){
+        while (i<20){
         new Abonents("start",q).start();
         i++;
         }

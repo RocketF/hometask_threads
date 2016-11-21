@@ -9,19 +9,10 @@ import java.util.TreeSet;
  * Created by rocketf on 23.10.16.
  */
 public class Basket {                        //сорировочные корзины
-    ArrayList basket;
+    TreeMap<Double, String> basket;
 
     public Basket() {
-        this.basket = new ArrayList<String>();
+        this.basket = new TreeMap<>();
     }
 
-    public String sortBasket(Basket b) {
-        for (int n = 0; n < b.basket.size(); n++) {
-            b.basket.get(n);
-            System.out.println(b.basket.get(n));
-        }
-        return "корзина" + "отсортирована";
-    }
-
-    private
 }

@@ -13,7 +13,6 @@ public class RandomText {
           string.append(randomTime());
           string.append(" ");
           string.append(randomText());
-          System.out.println("text created");
           return  string.toString();
       }
     static String randomTitle() {
@@ -27,7 +26,6 @@ public class RandomText {
         GregorianCalendar cal = new GregorianCalendar(2016, Calendar.SEPTEMBER, 20);
         cal.add(Calendar.MONTH, random.nextInt(4));
         Long i = cal.getTimeInMillis();
-        System.out.println(i);
         return i+" ";
     }
     static String randomText(){

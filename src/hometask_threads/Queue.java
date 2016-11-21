@@ -11,7 +11,6 @@ public class Queue {                        //очередь
 
     public void insert (String element){
         queue.add(element);
-        System.out.println("insert in queue");
     }
     public String take(){
         Integer n = queue.size();
