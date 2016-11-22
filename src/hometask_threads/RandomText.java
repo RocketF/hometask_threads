@@ -18,13 +18,13 @@ public class RandomText {
     static String randomTitle() {
         String[] title = {"info", "error", "question", "todo"};
         Random ran = new Random();
-        String wTitle = title[ran.nextInt(2)];
+        String wTitle = title[ran.nextInt(4)];
         return wTitle;
     }
     static String randomTime() {     //milliseconds
         Random random = new Random();
         GregorianCalendar cal = new GregorianCalendar(2016, Calendar.SEPTEMBER, 20);
-        cal.add(Calendar.MONTH, random.nextInt(4));
+        cal.add(Calendar.MONTH, random.nextInt(10));
         Long i = cal.getTimeInMillis();
         return i+" ";
     }

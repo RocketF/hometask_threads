@@ -27,16 +27,16 @@ public class ThreadSort extends Thread{
         while (q.size() > 0) {
             s = q.take();
             if (check(p1, s)){
-                insertInBasket(b1,s);
+                insertInBasket(b1,s,s.substring(5,18));
                 continue;
             } else if (check(p2, s)) {
-                insertInBasket(b2,s);
+                insertInBasket(b2,s,s.substring(6,19));
                 continue;
             } else if (check(p3, s)) {
-                insertInBasket(b3,s);
+                insertInBasket(b3,s,s.substring(9,22));
                 continue;
             }
-            insertInBasket(b4,s);
+            insertInBasket(b4,s,s.substring(5,18));
         }System.out.println(b1.basket.values());
         System.out.println(b2.basket.values());
         System.out.println(b3.basket.values());
@@ -48,9 +48,9 @@ public class ThreadSort extends Thread{
         Matcher m = p1.matcher(s);
         return m.matches();
     }
-    private void insertInBasket(Basket b, String s){
+    private void insertInBasket(Basket b, String s, String sub){
         try {
-       b.basket.put(Double.parseDouble(s.substring(5,18)),s);
+       b.basket.put(Double.parseDouble(sub),s);
         }catch (ClassCastException e) {
         System.err.println("NumberFormatException");
     }
